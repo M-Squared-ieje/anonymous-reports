@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M²'s 18×18 Compass Reports</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background: #f4f6f9;
+            color: #1e293b;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page-wrapper {
+            width: 100%;
+            max-width: 900px;
+            padding: 48px 24px 32px;
+            flex: 1;
+        }
+
+        /* ── Header ── */
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .header-logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+            margin-bottom: 28px;
+        }
+
+        .header-logos img {
+            height: 64px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .header h1 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.02em;
+            margin-bottom: 6px;
+        }
+
+        .header p {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #64748b;
+        }
+
+        /* ── Report Cards ── */
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 32px 28px 28px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            transform: translateY(-3px);
+        }
+
+        .card-logo {
+            height: 96px;
+            width: auto;
+            max-width: 160px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
+        .card-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 6px;
+        }
+
+        .card-label {
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: #94a3b8;
+            letter-spacing: 0.03em;
+        }
+
+        .card-arrow {
+            margin-top: 16px;
+            font-size: 1.25rem;
+            color: #7fb8d8;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover .card-arrow {
+            transform: translateX(4px);
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 0.78rem;
+            color: #94a3b8;
+        }
+
+        .footer a {
+            color: #7fb8d8;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            .cards { grid-template-columns: 1fr; }
+            .header-logos img { height: 48px; }
+            .header h1 { font-size: 1.35rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="header">
+            <div class="header-logos">
+                <img src="Report-Jewish-College-Prep/assets/m2-logo.png" alt="M² Logo">
+                <img src="Report-Jewish-College-Prep/assets/logo.png" alt="18×18 Logo">
+            </div>
+            <h1>18×18 Compass Reports</h1>
+            <p>Select an organization to view its report</p>
+        </div>
+
+        <div class="cards">
+            <a href="Report-Jewish-College-Prep/index.html" class="card" id="card-jcp">
+                <img src="Report-Jewish-College-Prep/assets/jewish-college-prep-logo.png"
+                     alt="Jewish College Prep Logo" class="card-logo">
+                <div class="card-name">Jewish College Prep</div>
+                <div class="card-label">View Compass Report →</div>
+            </a>
+
+            <a href="Report_Jewish_Academy/index.html" class="card" id="card-ja">
+                <img src="Report_Jewish_Academy/assets/jewish-academy-logo.png"
+                     alt="Jewish Academy Logo" class="card-logo">
+                <div class="card-name">Jewish Academy</div>
+                <div class="card-label">View Compass Report →</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="https://ieje.org/18x18/educational-dimensions-of-jewish-life/18x18-compass/">Learn more about the 18×18 Compass</a>
+        <br>M² New York &bull; M² Jerusalem &bull; M² Chicago &bull; <a href="mailto:contact@ieje.org">contact@ieje.org</a>
+    </div>
+</body>
+</html>
